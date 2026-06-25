@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #12001f;
+  --color-bg-secondary: #1a082e;
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-surface-strong: rgba(255, 255, 255, 0.08);
+  --color-primary: #a855f7;
+  --color-primary-dark: #7e22ce;
+  --color-secondary: #ec4899;
+  --color-accent: #f472b6;
+  --color-text: #f8fafc;
+  --color-text-secondary: #e9d5ff;
+  --color-text-muted: #c4b5fd;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(168, 85, 247, 0.55);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--color-text);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(168, 85, 247, 0.22), transparent 34rem),
+    radial-gradient(circle at 86% 20%, rgba(236, 72, 153, 0.16), transparent 30rem),
+    linear-gradient(180deg, #12001f 0%, #18002b 48%, #12001f 100%);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0;
+}
+
+::selection {
+  color: #ffffff;
+  background: #ec4899;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase text-blush;
+}
+
+.focus-ring {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blush;
+}
